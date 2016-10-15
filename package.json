@@ -1,0 +1,26 @@
+{
+  "name": "cook-webpack",
+  "version": "1.0.0",
+  "description": "Cook up webpack configs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalcifer/cook-webpack.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "pksjce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalcifer/cook-webpack/issues"
+  },
+  "homepage": "https://github.com/kalcifer/cook-webpack#readme",
+  "devDependencies": {
+    "codemirror": "^5.19.0",
+    "mocha": "^3.1.2"
+  }
+}
