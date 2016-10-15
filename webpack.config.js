@@ -7,6 +7,13 @@ module.exports = function(env) {
             filename: 'bundle.js',
             path: path.resolve(__dirname, 'dist')
         },
+        module: {
+            loaders: [{
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'src'),
+                loader: 'babel-loader'
+            }]
+        },
         plugins:[
             new HtmlWebpackPlugin({
                 filename: 'index.html',
