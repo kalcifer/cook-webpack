@@ -1,3 +1,4 @@
+/** @jsx element */
 import {element} from 'deku';
 import makeUI from '../utils';
 
