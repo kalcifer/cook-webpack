@@ -1,7 +1,12 @@
 import {element} from 'deku';
-let MyTextArea = {
+import makeUI from '../utils';
+
+let RenderSchema = {
     render: ({props, state}) => {
-        return <div>Show text area</div>
+        console.log(makeUI());
+        return <div>
+            <h1>Show schema here</h1>
+        </div>
     },
     beforeRender: () => {
         console.log('Im before rendering');
@@ -11,4 +16,4 @@ let MyTextArea = {
     }
 }
 
-export default MyTextArea
+export default RenderSchema

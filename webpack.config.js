@@ -10,15 +10,18 @@ module.exports = function(env) {
         module: {
             loaders: [{
                 test: /\.js$/,
+                exclude: /node_modules/,
                 include: path.resolve(__dirname, 'src'),
+                
                 loader: 'babel-loader'
-            }]
+            },{ test: /\.json$/, loader: 'json'}]
         },
         plugins:[
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: path.resolve(__dirname, 'src/assets/index.html')
             })
-        ]
+        ],
+        devtool: 'source-map'
     }
 }
