@@ -3,7 +3,7 @@ import assert from 'assert';
 import mock from 'component-mock';
 import element from 'virtual-element';
 import makeUI from '../src/utils';
-import schema from '../schema/webpackSchema.json'
+import schema from '../schema/webpackSchema.json';
 
 import App from '../src/components/index.js';
 
@@ -14,9 +14,17 @@ describe('TextArea', function() {
     })
 });
 
-describe('makeUI', function() {
+describe('makeUI for entry', function() {
+    var {elementUI, prop} = makeUI();
     it('should pick up entry config', () => {
-        var madeUi = makeUI();
-        assert.equal(madeUi.description, "The entry point(s) of the compilation.")
+        assert.equal(prop.description, "The entry point(s) of the compilation.");
+        assert.ok(elementUI);
+    })
+})
+
+describe('anyOf, allOf etc', function() {
+    var {prop, elementUI} = makeUI();
+    it('should say two options available', () => {
+        assert.equal(elementUI.options.length, 2)
     })
 })
