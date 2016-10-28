@@ -1,6 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-module.exports = function(env) {
+module.exports = function() {
     return {
         entry: path.resolve(__dirname, 'src/index.js'),
         output: {
@@ -14,7 +14,7 @@ module.exports = function(env) {
                 include: path.resolve(__dirname, 'src'),
                 
                 loader: 'babel-loader'
-            },{ test: /\.json$/, loader: 'json'}]
+            },{ test: /\.json$/, loader: 'json-loader', exclude: /node_modules/}]
         },
         plugins:[
             new HtmlWebpackPlugin({

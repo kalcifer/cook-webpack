@@ -3,9 +3,10 @@ import {element} from 'deku';
 
 let Arr = {
     render: ({props, state}) => {
+        const items = props.items;
         return <div data-type='arr'>
-            {props.description}
-            {props.children}
+            {items.type === 'string' ? <input type='text' /> : ""}
+            <div>+ Add more</div>
         </div>
     }
 }

@@ -5,6 +5,7 @@ import AnyOf from '../components/anyOf';
 import AnyProp from '../components/anyProp';
 import Obj from '../components/obj';
 import AllOf from '../components/allOf';
+import Arr from '../components/arr';
 
 let definitions = schema.definitions;
 const makeUI = function(part = 'entry'){
@@ -41,7 +42,7 @@ const interpretUI = function(prop, elementUI) {
         } else if(type === 'string'){
             return <input type='text' placeholder={actualProp.description}/>
         } else if(type === 'array') {
-            return 'array'
+            return <Arr {...actualProp}/>
         }
     } else if(actualProp['allOf']){
         var children = [];
