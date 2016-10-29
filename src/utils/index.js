@@ -14,7 +14,7 @@ const makeUI = function(part = 'entry'){
     return {prop, elementUI};
 }
 
-const interpretUI = function(prop, elementUI) {
+export const interpretUI = function(prop, elementUI) {
     let actualProp = prop;
     if(prop['$ref']){
         let ref = prop['$ref'];
@@ -43,6 +43,13 @@ const interpretUI = function(prop, elementUI) {
             return <input type='text' placeholder={actualProp.description}/>
         } else if(type === 'array') {
             return <Arr {...actualProp}/>
+        } 
+    } else if(actualProp['instanceof']){
+        const instanceOf = actualProp['instanceof'];
+        if(instanceOf === 'Function') {
+            return "Function"
+        } else if(instanceOf === 'RegExp'){
+            return 'RegExp';
         }
     } else if(actualProp['allOf']){
         var children = [];
@@ -50,6 +57,8 @@ const interpretUI = function(prop, elementUI) {
             children.push(interpretUI(eachOfAny));
         })
         return <AllOf children={children}/>; 
+    } else if(actualProp['enum']){
+        return 'Enum'
     }
     return elementUI;
 }
@@ -57,7 +66,7 @@ const getDef = (ref) => {
     return ref.split('/')[2];
 }
 
-const resolveRef = (ref = '') => {
+export const resolveRef = (ref = '') => {
     return definitions[getDef(ref)];
 }
 

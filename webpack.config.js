@@ -22,6 +22,6 @@ module.exports = function() {
                 template: path.resolve(__dirname, 'src/assets/index.html')
             })
         ],
-        devtool: 'source-map'
+        devtool: 'eval'
     }
 }

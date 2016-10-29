@@ -6,7 +6,11 @@ let RenderSchema = {
     render: ({props, state}) => {
         return <div>
             <h1>Show schema here</h1>
-            {makeUI().elementUI}
+            {['entry', 'externals', 'context', 'dependencies', 'devtool', 'name']
+                .map((property) => (<div class='next-node'>
+                    <div>{property.toUpperCase()}</div>
+                    <div >{makeUI(property).elementUI}</div>
+                </div>))}
         </div>
     }
 }
