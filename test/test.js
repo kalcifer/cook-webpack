@@ -55,3 +55,10 @@ describe('makeUI for entry', function() {
     })
 
 })
+
+describe('Array tests', () => {
+    it('should have data type array', () => {
+        const elementMock = mock(Arr).render();
+        assertElem.isNode(elementMock)
+    })
+})
