@@ -2,17 +2,30 @@
 import {element} from 'deku';
 import {interpretUI} from '../utils'
 
-let Arr = {
-    render: ({props, state}) => {
+function render ({props, state}) {
         let items = props.items;
         if(items['$ref'] === '#/definitions/externals') {
             return <div>TODO - This is recursive </div>
         }
         return <div data-type='arr'>
-            {items && items.type === 'string' ? <input type='text' /> : interpretUI(items)}
+            {items && items.type === 'string' ? <input type='text' /> : interpretUI(items, props.id)}
             <div>+ Add more</div>
         </div>
     }
+
+
+function onCreate ({ props, dispatch }) {
+  dispatch({
+    type: 'ELEMENT_CREATED',
+    id: props.id
+  })
 }
 
-export default Arr
+function onRemove ({ props, dispatch }) {
+  dispatch({
+    type: 'ELEMENT_REMOVED',
+    id: props.id
+  })
+}
+
+export default {render, onCreate, onRemove}

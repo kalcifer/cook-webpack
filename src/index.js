@@ -8,3 +8,5 @@ let store = createStore(rootReducer);
 let render = createApp(document.getElementById('root'), store.dispatch);
 
 render(<App></App>, store.getState());
+
+export {store}

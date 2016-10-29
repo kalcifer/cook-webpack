@@ -4,3 +4,19 @@
 .next-node {
     padding-top:40px;
 }
+
+.container {
+    display: flex;
+}
+
+.left {
+    width: 20%;
+}
+
+.right {
+    width: 80%;
+}
+
+.selectedProp {
+    color: blue;
+}
