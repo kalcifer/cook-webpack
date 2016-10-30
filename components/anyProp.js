@@ -1,14 +1,13 @@
-/** @jsx element */
-import {element} from 'deku';
+import React, {Component} from 'react'
 import TextBox from './textBox';
 
-let AnyProp = {
-    render: ({props, state}) => {
+class AnyProp extends Component {
+    render(){
         console.log('here i am')
         return <div data-type='anyProp'>
             <div>
                 <TextBox label='label'/>
-                {props.child}
+                {this.props.child}
             </div>
             <div>
                 + Add more props

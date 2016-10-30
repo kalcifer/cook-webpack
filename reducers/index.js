@@ -1,4 +1,4 @@
-export default function rootReducer(state = {
+export default function (state = {
     currentProp: 'entry',
     propDetails:{}
 }, action){

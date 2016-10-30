@@ -1,4 +1,4 @@
-{
+export default {
   "additionalProperties": false,
   "definitions": {
     "common.arrayOfStringOrStringArrayValues": { 
