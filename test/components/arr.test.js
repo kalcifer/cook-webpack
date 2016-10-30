@@ -1,15 +1,11 @@
-/** @jsx element */
-import assertElem from 'assert-element';
-import assert from 'assert';
-import mock from 'component-mock';
-import element from 'virtual-element';
-import isNode from 'deku-component-is-node'
+import React from 'react';
+import renderer from 'react-test-renderer';
 
-import Arr from '../../src/components/arr';
+import Arr from '../../components/arr';
 
-describe('Array tests', () => {
-    xit('should have data type array', () => {
-        const elementMock = mock(<Arr/>);
-        assertElem.isNode(elementMock)
-    })
+test('Shows array type field', ()=>{
+    let items = {'$ref':'#/definitions/externals'};
+    const component = renderer.create(<Arr items={items} id={1} parentId={0}/>);
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
 })
