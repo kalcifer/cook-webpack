@@ -1,0 +1,7 @@
+exports[`test Should be object component 1`] = `
+<div
+  data-type="obj">
+  This is test component
+  Strings
+</div>
+`;

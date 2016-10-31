@@ -1,0 +1,14 @@
+exports[`test AllOf component 1`] = `
+<div
+  data-type="allOf">
+  <div>
+    String
+    <div>
+       And 
+    </div>
+  </div>
+  <div>
+    Minimum2
+  </div>
+</div>
+`;
