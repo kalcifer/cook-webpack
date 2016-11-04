@@ -6,7 +6,8 @@
   "scripts": {
     "build": "eslint .",
     "start": "next",
-    "test": "jest --watch"
+    "test": "jest --no-cache --verbose --coverage",
+    "test-dev": "jest --watch"
   },
   "repository": {
     "type": "git",
