@@ -6,6 +6,7 @@ export default function (state = {
         /* eslint-disable no-console */
         console.log(action.id);
     } else if(action.type === 'ELEMENT_REMOVED'){
+        /* eslint-disable no-console */
         console.log(action.id);
     } else if(action.type === 'CHOOSE_PROP'){
         return {...state, currentProp:action.property};
