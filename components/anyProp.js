@@ -3,7 +3,6 @@ import TextBox from './textBox';
 
 class AnyProp extends Component {
     render(){
-        console.log('here i am');
         return <div data-type='anyProp'>
             <div>
                 <TextBox label='label'/>

@@ -30,10 +30,9 @@ export const interpretUI = function(prop, parentId) {
     } else if(actualProp['type']){
         const type = actualProp['type'];
         if(type === 'object'){
-            console.log(actualProp);
             let children = [];
             if(actualProp['properties']){
-
+                // write something
             }
             if(actualProp['additionalProperties']){
                 var child = interpretUI(actualProp['additionalProperties'], id);
@@ -53,7 +52,7 @@ export const interpretUI = function(prop, parentId) {
             return 'RegExp';
         }
     } else if(actualProp['allOf']){
-        var children = [];
+        children = [];
         actualProp['allOf'].map((eachOfAny) => {
             children.push(interpretUI(eachOfAny, id));
         });
@@ -61,7 +60,7 @@ export const interpretUI = function(prop, parentId) {
     } else if(actualProp['enum']){
         return 'Enum';
     }
-    return elementUI;
+    return 'Other';
 };
 const getDef = (ref) => {
     return ref.split('/')[2];

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import assertElem from 'assert-element';
 import assert from 'assert';
 import mock from 'component-mock';

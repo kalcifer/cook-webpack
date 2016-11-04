@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Provider } from 'react-redux';
 import { initStore } from '../store';
 import reducer from '../reducers';
-import Link from 'next/link';
+// import Link from 'next/link';
 import App from '../components';
 
 export default class Chef extends Component {
