@@ -8,4 +8,4 @@ test('Should be object component', () => {
     const component = renderer.create(<Obj description="This is test component" children={children}/>);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
-})
+});

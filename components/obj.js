@@ -5,7 +5,7 @@ class Obj extends Component {
         return <div data-type='obj'>
             {this.props.description}
             {this.props.children}
-        </div>
+        </div>;
     }
 }
 

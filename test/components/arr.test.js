@@ -8,4 +8,4 @@ test('Shows array type field', ()=>{
     const component = renderer.create(<Arr items={items} id={1} parentId={0}/>);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
-})
+});

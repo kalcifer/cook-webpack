@@ -8,4 +8,4 @@ test('AllOf component', () => {
     const component = renderer.create(<AllOf children={children}/>);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot(); 
-}) 
+}); 

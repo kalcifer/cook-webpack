@@ -7,32 +7,32 @@ export class RenderSchema extends Component{
         super();
         this.state = {
             selectedProp: 'entry'
-        }
+        };
     }
     handleClick(prop){
         this.setState({
             selectedProp: prop
-        })
+        });
     }
     render() {
         return <div>
             <h1>Cook your own webpack</h1>
-            <div class='container'>
-                <div class='left'>
+            <div className='container'>
+                <div className='left'>
                     <ul>
                     {['entry', 'externals', 'context', 'dependencies', 'devtool', 'name'].map((property, id) => 
                         <li key={id} onClick={this.handleClick.bind(this, property)}>{property}</li>
                     )}
                     </ul>
                 </div>
-                <div class='right'>
-                    <div class='next-node'>
+                <div className='right'>
+                    <div className='next-node'>
                         <div>{this.state.selectedProp.toUpperCase()}</div>
                         <div >{makeUI(this.state.selectedProp).elementUI}</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>;
     }
 }
 

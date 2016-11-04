@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import TextBox from './textBox';
 
 class AnyProp extends Component {
     render(){
-        console.log('here i am')
+        console.log('here i am');
         return <div data-type='anyProp'>
             <div>
                 <TextBox label='label'/>
@@ -12,8 +12,8 @@ class AnyProp extends Component {
             <div>
                 + Add more props
             </div>
-        </div>
+        </div>;
     }
 }
 
-export default AnyProp
+export default AnyProp;
