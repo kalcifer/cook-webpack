@@ -1,5 +1,7 @@
 ## Cook-Webpack
 
+[![Build Status](https://travis-ci.org/kalcifer/cook-webpack.svg?branch=master)](https://travis-ci.org/kalcifer/cook-webpack)
+
 `webpack` configuration is hard to construct. This is a well acknowledged problem. 
 
 ## Vision
