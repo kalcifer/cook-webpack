@@ -10,10 +10,10 @@ Its ambitious but this project aims to provide an graphical interface to build y
 
 18/10/2016 - Setup deku and a testable surface. Copied webpack schema.
 21/10/2016 - entry part schema half decoded along with tests. Needs tests for individual models
-
+01/11/2016 - Moved to nextjs as was facing issues with new deku and redux.
+02/11/2016 - Added more schema props and made a selectable interface.
+04/11/2016 - Added linting and travis build to the project.
 
 ### TODO
-1. Tests for individual model components
-2. Array component
-3. Other properties
-4. Perfect the individual components
+Design each component better
+Generate config js using redux
